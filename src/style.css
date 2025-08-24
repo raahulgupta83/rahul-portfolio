@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base tweaks */
+@layer base {
+  html { scroll-behavior: smooth; }
+  ::selection { @apply bg-indigo-500 text-white; }
+}
+
+/* Light mode subtle gradient background helper */
+@layer utilities {
+  .light-sky {
+    @apply bg-gradient-to-b from-sky-50 via-white to-sky-50;
+  }
+  .card-light {
+    @apply border border-black/10 bg-white shadow-sm;
+  }
+  .card-dark {
+    @apply border border-white/10 bg-white/5;
+  }
+}
+
